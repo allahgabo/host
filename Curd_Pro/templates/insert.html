@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+	{% block content %}
+		<h2 class="">Insert Page</h2>
+		<div>
+		<form method="POST">
+			{% csrf_token %}
+			<label id="produc_id">Enter Product ID</label>
+			{{form.product_id}}<br>
+			<label >Enter Product Name</label>
+			{{form.product_name}}<br>
+			<label >Enter Product Cost</label>
+			{{form.product_cost}}<br>
+			<label >Enter Product Color</label>
+			{{form.product_color}}<br>
+			<label >Enter Product Class</label>
+			{{form.product_class}}<br>
+			<label >Enter Custom Name</label>
+			{{form.custom_name}}<br>
+			<label >Enter Custom Mobile</label>
+			{{form.custom_mobile}}<br>
+			<label >Enter Custom Email</label>
+			{{form.custom_email}}<br>
+			<input type="submit" value="Insert" class="btn btn-primary">
+			
+		</form>
+		</div>
+    {% endblock content %}
